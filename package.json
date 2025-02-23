@@ -1,0 +1,62 @@
+{
+  "name": "llmignore",
+  "version": "1.0.0",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "llmignore": "./dist/index.js"
+  },
+  "description": "Generate LLM context from your codebase with .llmignore",
+  "author": {
+    "name": "Hüseyin Demirtaş",
+    "email": "info@huseyindemirtas.net",
+    "url": "https://huseyindemirtas.net"
+  },
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dilsayar/llmignore.git"
+  },
+  "keywords": [
+    "llm",
+    "context",
+    "ignore",
+    "codebase",
+    "llmignore",
+    "llm context generator",
+    "codebase context",
+    "ai",
+    "machine-learning",
+    "development-tools"
+  ],
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "prepublishOnly": "bun run build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cli-progress": "^3.12.0",
+    "commander": "^13.1.0",
+    "enquirer": "^2.4.1",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cli-progress": "^3.11.6",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
+}
